@@ -1,0 +1,21 @@
+{
+  "name": "brief-agent-board",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A minimal Markdown workspace for handing clear, visual briefs to agents.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.js",
+    "dev": "node --env-file-if-exists=.env --watch server.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "marked": "^16.0.0",
+    "multer": "^2.0.2",
+    "sanitize-html": "^2.18.0"
+  }
+}

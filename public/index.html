@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Brief</title>
+    <meta name="description" content="Markdown briefs for your agents." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <aside id="sidebar">
+      <a class="brand" href="/" aria-label="Brief home"
+        ><span class="brand-icon">b.</span>brief<span class="brand-period"
+          >/</span
+        ></a
+      >
+      <button class="new-button" id="new-post">
+        <span>New post</span><span aria-hidden="true">＋</span>
+      </button>
+      <div class="list-heading">
+        <span>POSTS</span><span id="post-count">0</span>
+      </div>
+      <nav id="post-list" aria-label="Posts"></nav>
+      <div class="sidebar-bottom">
+        <a href="/README.md">Agent README <span>↗</span></a
+        ><span class="local-indicator"><i></i> Your workspace</span>
+      </div>
+    </aside>
+    <button id="sidebar-scrim" aria-label="Close posts" tabindex="-1"></button>
+    <div id="workspace">
+      <header class="topbar">
+        <div class="top-left">
+          <button
+            class="icon-button"
+            id="toggle-sidebar"
+            aria-label="Toggle posts"
+            aria-expanded="false"
+          >
+            ☰</button
+          ><span id="breadcrumb">Workspace</span>
+        </div>
+        <div id="actions"></div>
+      </header>
+      <main id="main"><!--CONTENT--></main>
+    </div>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <dialog id="tag-dialog" aria-labelledby="tag-heading">
+      <div class="dialog-top">
+        <h2 id="tag-heading">Agent tags</h2>
+        <button class="icon-button" id="close-tags" aria-label="Close tags">
+          ×
+        </button>
+      </div>
+      <div id="tag-options"></div>
+      <form id="custom-tag-form">
+        <label for="custom-tag">Custom tag</label>
+        <div class="custom-row">
+          <input
+            id="custom-tag"
+            maxlength="40"
+            placeholder="e.g. Accessibility"
+            autocomplete="off"
+          /><button class="button" type="submit">Add</button>
+        </div>
+      </form>
+    </dialog>
+    <input type="file" id="file-picker" hidden multiple />
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
